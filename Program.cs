@@ -133,3 +133,39 @@
 // }
 // int[] grades = { 4, 5, 3, 9, 7 };
 // Console.WriteLine($"Максимально число {FindMax(grades)}");
+
+// System.Console.Write("Введите свою фамилию: ");
+// string surname = System.Console.ReadLine()!.Trim();
+// if (string.IsNullOrEmpty(surname))
+// {
+//     System.Console.WriteLine("Фамилия не введена. Завершение работы.");
+//     return;
+// }
+// Random rnd = new(surname.GetHashCode() + DateTime.Now.DayOfYear);
+// var assigned = Enumerable.Range(1, 10)
+//     .OrderBy(_ => rnd.Next())
+//     .Take(2)
+//     .OrderBy(x => x)
+//     .ToList();
+// System.Console.WriteLine($"Задачи: №{assigned[0]} и №{assigned[1]}");
+
+// // Вариант 3
+// bool IsPositive(int number)
+// {
+//     return number > 0;
+// }
+// int num = -10;
+// System.Console.WriteLine($"Определение знака числа {num} (true - '+', false - '-'): {IsPositive(num)}");
+
+// Вариант 4
+int SumArray(int[] numbers)
+{
+    int sum = 0;
+    foreach (int number in numbers)
+    {
+        sum += number;
+    }
+    return sum;
+}
+int[] massif = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+System.Console.WriteLine($"Сумма массива: {SumArray(massif)}");
